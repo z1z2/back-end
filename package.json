@@ -4,6 +4,7 @@
   "description": "",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "egg": "^2.2.1",
     "egg-scripts": "^2.5.0"
   },
@@ -23,7 +24,7 @@
   "scripts": {
     "start": "egg-scripts start --daemon --title=egg-server-back-end",
     "stop": "egg-scripts stop --title=egg-server-back-end",
-    "dev": "egg-bin dev",
+    "dev": "node scripts/get-libs.js && egg-bin dev",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",
