@@ -24,6 +24,7 @@
   "scripts": {
     "start": "egg-scripts start --daemon --title=egg-server-back-end",
     "stop": "egg-scripts stop --title=egg-server-back-end",
+    "get-libs": "node scripts/get-libs.js",
     "dev": "node scripts/get-libs.js && egg-bin dev",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
