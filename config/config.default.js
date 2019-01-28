@@ -1,4 +1,5 @@
 'use strict';
+const path = require('path');
 
 module.exports = appInfo => {
   const config = exports = {};
@@ -9,5 +10,12 @@ module.exports = appInfo => {
   // add your config here
   config.middleware = [];
 
+  exports.static = {
+    prefix: '/public/',
+    dir: [
+      path.join(appInfo.baseDir, 'web'), // 前端文件
+      path.join(appInfo.baseDir, 'user'), // 用户文件
+    ],
+  };
   return config;
 };
